@@ -1,0 +1,12 @@
+[build]
+  # GOOGLE_API_KEY is set in Netlify: Site settings > Environment variables.
+  # The two secret files are gitignored, so they are generated here at build time.
+  command = '''
+git clone https://github.com/flutter/flutter.git --depth 1 -b stable &&
+export PATH="$PATH:`pwd`/flutter/bin" &&
+mkdir -p lib/config &&
+printf "const String kGoogleApiKey = '%s';\n" "$GOOGLE_API_KEY" > lib/config/secrets.dart &&
+printf "window.GOOGLE_MAPS_API_KEY = '%s';\n" "$GOOGLE_API_KEY" > web/maps_config.js &&
+flutter build web
+'''
+  publish = "build/web"

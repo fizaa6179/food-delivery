@@ -1,0 +1,46 @@
+name: food_delivery_app
+description: A local food delivery app with SQLite database.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  sqflite: ^2.3.0
+  path: ^1.8.3
+  path_provider: ^2.1.1
+  provider: ^6.1.1
+  intl: ^0.19.0
+  google_fonts: ^6.1.0
+  cupertino_icons: ^1.0.6
+  flutter_stripe: 11.5.0
+  http: ^1.2.1
+
+  google_maps_flutter: ^2.9.0
+  flutter_google_places_sdk: ^0.3.9
+  geolocator: ^13.0.1
+  geocoding: ^3.0.0
+  sqflite_common_ffi_web: ^1.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    #- assets/images/logo.png
+    - assets/images/banners/
+    - assets/images/restaurants/
+    - assets/images/food/urban_bites/
+    - assets/images/food/pizza_street/
+    - assets/images/food/spice_garden/
+    - assets/images/food/wok_and_bowl/
+    - assets/images/food/brew_house/
+    - assets/images/food/wrap_and_roll/
+    - assets/images/food/sweet_cravings/
+    - assets/images/food/desi_dastarkhwan/
